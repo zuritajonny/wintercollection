@@ -13,7 +13,7 @@ const CreateAccountScreen = ({setIsLoggedIn}) => {
   
   const [name,setName] = useState('')
   const [lookingFor,setLookingFor] = useState('')
-  const [isRegistered, setIsRegistered] = useState(true)
+  
 
   const guests = useSelector(state => state.guests)
   
@@ -43,7 +43,7 @@ const CreateAccountScreen = ({setIsLoggedIn}) => {
       name,
       lookingFor,
       id: genID(),
-      isRegistered
+      
     }
 
     /* setGuest([...guest,newGuest]) */  
