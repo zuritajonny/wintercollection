@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+App de e-commerce hecha por Jonny Zurita: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+      App de e-comerce de una tienda de ropa digital la cual tenga un
+      showcase de sus productos personalizados por cada usuario de acuerdo a si es 
+      hombre o mujer , para esto necesitaré un login y un password con su respectiva 
+      validacion e informacion que le pregunte al usuario si es M o F.
+     Despues del individuo logearse, mostrar el home con una presentacion de los 
+      "$(Nombre de la tienda) Winter Clothing", mostrar en donde están ubicados con su
+      respectiva localicación en Google Maps sobre la o las tiendas fisicas.
+     En el inicio tambien habrán secciones sobre se muestren lentes, pantalones, y camisas.
 
-## Available Scripts
+     LO MAS IMPORTANTE es:
+      1. Busqueda filtrada.  (Buscar APi de fotos de ropa: lentes, zapatos, 
+        pantalones, camisas etc.)
+      2. Carrito de compras.
 
-In the project directory, you can run:
+      El usuario puede buscar lo que necesite y le saldrá filtrada la información,
+      si decide comprar el producto aparecerá una notificiacion desde abajo hacia arriba
+      que diga "Producto añadido al carrito de compras".
+      El carrito de compras tendrá una vista Min que será un dropdown y Max que abrirá
+      un complemento entero.
+      
+      El home tendrá cada una de las secciones mencionadas antes la cual solo será 
+      accesible si se accede a ella despues de pasar por el inicio.
+      POR EJEMPLO: 
+      El usuario da click en "Tiendas", la pagina hará un scroll down sin actualizar
+      hacia la seccion tiendas desde el menu inicio. Ahí tendrá la opcion de 
+      "VER TODAS LAS TIENDAS", la cual abrirá el componete entero de tiendas siendo mas detallado.
 
-### `npm start`
+      POCAS SECIONES: el inicio solo contendrá {"Buscar", Home, "Winter Clothing", "Discover", "Stores"}
+      Coleccion
+      
+      Secciones y containers reutilizables.
+      Hacerla en ingles o español?
+      Usar styled components o CSS puro?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+      Todas las secciones tendran header y footer, el contenido irá cambiando respecto a la seccion y contenido.
+      KEEP IT SIMPLE, 3 colores, nada excéntrico. 
+      Buscar desde el logo hasta la imagen corporativa.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+      IMPORTANTE: cambiar el componente de shopping cart desde collection hasta 
+      header para que sea reusable.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      IMPORTANTE:  quitar el scroll en el eje Y cuaando los modales 
+      esten activados.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
