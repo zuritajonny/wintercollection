@@ -1,20 +1,15 @@
 import React from 'react'
 import {useSelector,useDispatch} from 'react-redux';
-import { addProduct,removeFromCart,increaseProduct,decreaseProduct,clearCart } from '../features/cart/cartSlice';
+import { removeFromCart,increaseProduct,decreaseProduct,clearCart } from '../features/cart/cartSlice';
 import * as Icon from 'react-feather';
-import { Link } from "react-router-dom";
+
 
 const ShopCart = ({openCart,activateCart}) => {
 
   const users = useSelector (state => state.guests)
   const products = useSelector (state=>state.cart)
 
-  const formatNumber = (number) => {
-    return Number(number).toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    })
-}
+
   
   
 
@@ -163,8 +158,8 @@ const ShopCart = ({openCart,activateCart}) => {
                 </div>
               :
               <div className='cart-warning'>
-                <p className=''>UPS! Looks like your cart is empty</p>
-
+                <p className=''>Oh, looks like your cart is empty!</p>
+ 
                 <button 
                   onClick={openCart}
                   className='cart-warning-button'  

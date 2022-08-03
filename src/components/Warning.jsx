@@ -10,7 +10,7 @@ function Warning({animateWarning}) {
   
 
   return (
-    <div className={animateWarning ? warningMessage=='Already in the cart!' ? 'cart-alert cart-check' : 'cart-alert ' : 'cart-alert animate-cart'}>
+    <div className={animateWarning ? warningMessage==='Already in the cart!' ? 'cart-alert cart-check' : 'cart-alert ' : 'cart-alert animate-cart'}>
         <Icon.Check/><p>{warningMessage}</p>
     </div>
   )

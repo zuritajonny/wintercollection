@@ -1,4 +1,4 @@
-import * as Icon from "react-feather";
+
 import shoes from '../media/shoes.jpg';
 import fullOutfit from '../media/casualM2.jpg';
 

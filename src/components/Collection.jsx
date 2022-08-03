@@ -4,24 +4,24 @@ import Footer from './Footer';
 import Warning from "./Warning";
 import Post from './Post';
 import ShoppingCart from "./ShoppingCart";
-import landing from '../media/coats2.jpg'
+
 import { Link } from 'react-router-dom';
 import { ArticleData } from "../helpers/ArticleData";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import {useSelector} from 'react-redux';
+
 import logo from '../media/logo.png';
 
 const Collection = () => {
 
-  const cart = useSelector(state => state.cart)
+  
   
 
   const [haveBought,setHaveBought] = useState();
   const [animateWarning, setAnimateWarning] = useState();
-  const [showCart, setShowCart] = useState();
+  
   const [activateHeader, setActivateHeader] = useState();
   const [openShoppingCart, setOpenShoppingCart] = useState();
-  const [viewProducts, setViewProducts] = useState();
+  
   const [activateCart,setActivateCart] = useState();
   
 
@@ -97,11 +97,12 @@ const Collection = () => {
         
         {ArticleData.map(article=>(
           <Post
+            
             article={article}
             haveBought={haveBought}
             setHaveBought={setHaveBought}
             setAnimateWarning={setAnimateWarning}
-            setShowCart={setShowCart}
+            
           />
         ))}
         </div>

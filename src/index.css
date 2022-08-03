@@ -492,7 +492,7 @@ body{
   display: none;
   line-height: 2rem;
 
-  margin-left: 1rem;
+  margin-left: 1rem;  
 }
 
 .sidebar-menu{
@@ -1066,6 +1066,17 @@ overflow-y: hidden;
 
 }
 
+/* .sidebar-menu p{
+  cursor: pointer;
+  padding: .5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  transition: 850ms ease-in-out;
+  border-bottom: 1px solid lightgrey;
+} */
+
 
 @media only screen and (min-width: 1080px){
   .sidebar-menu{
@@ -1079,7 +1090,7 @@ overflow-y: hidden;
   }
   .footer-text span{
     display: block
-   };
+   }
   .sidebar-menu p{
     cursor: pointer;
     padding: .5rem;

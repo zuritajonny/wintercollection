@@ -1,18 +1,18 @@
 import React from 'react'
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import * as Icon from 'react-feather';
-import {useDispatch,useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { addProduct } from '../features/cart/cartSlice';
 
-const Post = ({article,setHaveBought,haveBought,setAnimateWarning,setShowCart}) => {
+const Post = ({article,setHaveBought,haveBought,setAnimateWarning}) => {
 
-  const product = useSelector(state => state.cart)
-  const message = useSelector(state => state.cart.message) 
+  
+  
   const dispatch = useDispatch()
 
   
   
-  console.log(message)
+  
 
   const {articleImg,articleName,articlePrice,id} = article
 
