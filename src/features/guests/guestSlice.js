@@ -1,21 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 
-const guestsInformation = [
-  /*   {
-        id: 1,
-        name: 'Lore',
-        lookingFor: 'female',
-        loggedIn: 21323 ,
-    },
-    {
-        id: 2,
-        name: 'Jonny Alejandro',
-        lookingFor: 'male',
-        loggedIn: true,
-    },
- */
-]
+const guestsInformation = []
 
 
 export const guestSlice = createSlice({

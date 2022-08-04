@@ -64,10 +64,12 @@ const Collection = () => {
                 
             </div>
 
-          <AiOutlineShoppingCart
-            className='shopping-cart'
-            onClick={openCart}
-          />
+            <div>
+              <AiOutlineShoppingCart
+                className='shopping-cart'
+                onClick={openCart}
+              />
+            </div>
         </div>
 
         {

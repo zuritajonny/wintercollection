@@ -14,6 +14,11 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
   
   const [sidebar, setSidebar] = useState(false)
 
+  const toggleView = () => {
+    setSidebar(!sidebar);
+  }
+
+
   const [searchBar,setSearchBar] = useState ();
 
 
@@ -61,13 +66,14 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
                 
                 </div>
 
-                <div className='asds'>
+                <div className='navbar-container'>
              
                 
                  <NavBar
+                  toggleView={toggleView}
                   hideMenu={hideMenu}
                   sidebar={sidebar}
-                  setSidebar={setSidebar}
+                  
                  />
                 
                 </div>
@@ -77,21 +83,21 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
             </header>
 
              <div className={searchBar ? ' search-overlay ' : ''}>
-                
+                 
+             </div> 
                 <div 
-                  onClick={searchHandler}
+                  
                   className={searchBar ? 'search-bar search-bar-active' : 'search-bar'}
                 >
                     <input type="text" placeholder='Vintage, hoodies, elegance...' className='search-input'/>
                     <button className='search-button'>Search</button>
                 </div>
 
-                
-              </div> 
+             
             
 
                     {/*   {wasClicked ?    <div className='asd'> */}
-
+{/* 
                     <div className={searchBar ? ' search-overlay ' : ''}>
               </div>
                 <div 
@@ -100,7 +106,7 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
                 >
                     <input type="text" placeholder='Vintage, hoodies, elegance...' className='search-input'/>
                     <button className='search-button'>Search</button>
-                </div>
+                </div> */}
 
 
           

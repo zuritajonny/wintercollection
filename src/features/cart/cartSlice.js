@@ -26,7 +26,7 @@ export const cartSlice = createSlice({
                 }else{
                     const actualProduct = {...action.payload, productQuantity: 1}
                     state.cartItems.push(actualProduct);
-                    state.message = 'Added to the cart!'
+                    state.message = 'Added to cart!'
                     
                 }
 

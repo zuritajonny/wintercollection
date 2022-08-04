@@ -5,13 +5,15 @@ const SearchBar = ({searchBar,searchHandler}) => {
   return (
     <div>
         
-        <div className=''>
+        <div 
+          onClick={searchHandler}
+          className='search-container'>
         {
                
                searchBar ? 
-                 <Icon.X className='search-icon icon' onClick={searchHandler}/> 
+                 <Icon.X className='search-icon icon' /> 
                  :
-                 <Icon.Search className='search-icon icon' onClick={searchHandler}/> 
+                 <Icon.Search className='search-icon icon' /> 
                }
 
 
