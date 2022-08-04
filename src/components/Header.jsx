@@ -1,17 +1,19 @@
 import React from 'react'
 import { useState } from 'react'
-import * as Icon from 'react-feather';
+
 
 
 import NavBar from './NavBar';
 import logo from '../media/logo.png';
 import {Link} from 'react-router-dom';
 import Message from './Message';
+import SearchBar from './SearchBar';
 
 
 const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
   
   const [sidebar, setSidebar] = useState(false)
+
   const [searchBar,setSearchBar] = useState ();
 
 
@@ -34,19 +36,25 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
             <header className='header-container '>
                 {/* "Buscar", Home, "Winter Clothing", "Discover", "Stores", el buscar a la izquierda, logo en el medio
                 y nav a la derecha */}
-                <div>
-                <div className={searchBar ? ' sbar-container bar-active' : 'sbar-container'}>
-                {
-                  searchBar ? 
-                    <Icon.X className='search-icon icon' onClick={searchHandler}/> 
-                    :
-                    <Icon.Search className='search-icon icon' onClick={searchHandler}/> 
-                  }
-                </div>
+                
+                {/* <div className={searchBar ? ' sbar-container bar-active' : 'sbar-container'}> */}
+                  {/* {
+                    searchBar ? 
+                      <Icon.X className='search-icon icon' onClick={searchHandler}/> 
+                      :
+                      <Icon.Search className='search-icon icon' onClick={searchHandler}/> 
+                    } */}
+
+                    <SearchBar
+                      searchBar={searchBar}
+                      searchHandler={searchHandler}
+                    />
+
+             {/*    </div> */}
 
                 
                 
-                </div>
+                
 
                 <div>
                     <Link to='/'><img src={logo} alt="" className='logo'/></Link>
@@ -54,13 +62,13 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
                 </div>
 
                 <div className='asds'>
-                <NavBar
+             
+                
+                 <NavBar
                   hideMenu={hideMenu}
                   sidebar={sidebar}
                   setSidebar={setSidebar}
-                />
-                
-               
+                 />
                 
                 </div>
               
@@ -68,7 +76,7 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
                   
             </header>
 
-              <div className={searchBar ? ' search-overlay ' : ''}>
+             <div className={searchBar ? ' search-overlay ' : ''}>
                 
                 <div 
                   onClick={searchHandler}
@@ -79,10 +87,23 @@ const Header = ({isLoggedIn,setIsLoggedIn,alertHandler}) => {
                 </div>
 
                 
-              </div>
+              </div> 
             
 
-          {/*   {wasClicked ?    <div className='asd'> */}
+                    {/*   {wasClicked ?    <div className='asd'> */}
+
+                    <div className={searchBar ? ' search-overlay ' : ''}>
+              </div>
+                <div 
+                  onClick={searchHandler}
+                  className={searchBar ? 'search-bar search-bar-active' : 'search-bar'}
+                >
+                    <input type="text" placeholder='Vintage, hoodies, elegance...' className='search-input'/>
+                    <button className='search-button'>Search</button>
+                </div>
+
+
+          
            
            <Message 
                   mensaje='Welcome! would you like to register first?'
